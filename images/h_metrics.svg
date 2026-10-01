@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="84" viewBox="0 0 1200 84" role="img" aria-label="Key Metrics">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0f2744"/><stop offset="1" stop-color="#1b7f8c"/></linearGradient></defs>
+  <rect width="1200" height="84" rx="12" fill="url(#g)"/>
+  <path d="M860 52 H930 L945 52 L960 26 L978 70 L994 40 L1006 52 H1100 L1112 52" fill="none" stroke="#7fe3d6" stroke-opacity="0.55" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="32" y="38" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Key Metrics</text>
+  <text x="32" y="64" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#9fe7dd">The four numbers that matter</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="210" viewBox="0 0 1200 210" role="img" aria-label="Key metrics: macro-F1 0.89, 31 of 35 risky cases found, 5 of 21 measurements suffice, same ranking across 5 seeds">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f2744"/><stop offset="1" stop-color="#1b7f8c"/></linearGradient></defs>
+<rect x="0" y="0" width="291" height="210" rx="16" fill="url(#g)"/>
+<text x="26" y="90" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="54" font-weight="800" fill="#7fe3d6">0.89</text>
+<text x="26" y="132" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Macro-F1, unseen data</text>
+<text x="26" y="162" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#c9e7e6">vs 0.29 for a naive rule</text>
+<rect x="303" y="0" width="291" height="210" rx="16" fill="url(#g)"/>
+<text x="329" y="90" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="54" font-weight="800" fill="#7fe3d6">31 / 35</text>
+<text x="329" y="132" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Risky cases found</text>
+<text x="329" y="162" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#c9e7e6">only 2 mistaken for Normal</text>
+<rect x="606" y="0" width="291" height="210" rx="16" fill="url(#g)"/>
+<text x="632" y="90" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="54" font-weight="800" fill="#7fe3d6">5 of 21</text>
+<text x="632" y="132" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Measurements suffice</text>
+<text x="632" y="162" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#c9e7e6">same quality as all 21</text>
+<rect x="909" y="0" width="291" height="210" rx="16" fill="url(#g)"/>
+<text x="935" y="90" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="54" font-weight="800" fill="#7fe3d6">5 / 5</text>
+<text x="935" y="132" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Seeds, same ranking</text>
+<text x="935" y="162" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#c9e7e6">not a lucky split</text>
+</svg>
