@@ -181,7 +181,7 @@ flowchart LR
 ## Repository & How to Run
 
 ```
-fetal-health-classification/
+Fetal_Health_Classification/
 ├── data/
 │   └── fetal_health_dataset.csv
 ├── notebooks/
@@ -193,8 +193,8 @@ fetal-health-classification/
 ```
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/fetal-health-classification.git
-cd fetal-health-classification
+git clone https://github.com/AlessandroCucchi/Fetal_Health_Classification.git
+cd Fetal_Health_Classification
 
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
