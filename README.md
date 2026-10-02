@@ -7,10 +7,7 @@
   <img src="https://img.shields.io/badge/pandas-0f2744?logo=pandas&logoColor=7fe3d6" alt="pandas">
   <img src="https://img.shields.io/badge/scikit--learn-0f2744?logo=scikitlearn&logoColor=7fe3d6" alt="scikit-learn">
   <img src="https://img.shields.io/badge/Jupyter-0f2744?logo=jupyter&logoColor=7fe3d6" alt="Jupyter">
-  <img src="https://img.shields.io/badge/License-MIT-1b7f8c" alt="MIT license">
 </p>
-
-# Fetal Health Analysis: spotting high-risk recordings early
 
 <p align="center">
   <a href="#project-background">Background</a> ·
@@ -18,19 +15,16 @@
   <a href="#executive-summary">Executive Summary</a> ·
   <a href="#insights-deep-dive">Insights</a> ·
   <a href="#recommendations">Recommendations</a> ·
-  <a href="#limitations">Limitations</a> ·
   <a href="#repository--how-to-run">How to Run</a>
 </p>
 
-> **In one sentence:** using 21 measurements from fetal heart-rate monitoring (CTG), a Random Forest model correctly flagged **31 of the 35 high-risk cases** held back for testing and reached a score of **0.89** on a 0-1 scale, against **0.29** for a rule that always answers "healthy". Only **5 of the 21 measurements** were needed to match the full set.
+> Using 21 measurements from fetal heart-rate monitoring (CTG), a Random Forest model correctly flagged **31 of the 35 high-risk cases** held back for testing and reached a score of **0.89** on a 0-1 scale, against **0.29** for a rule that always answers "healthy". Only **5 of the 21 measurements** were needed to match the full set.
 
 <br>
 
 <img src="images/h_background.svg" alt="Project Background" width="100%">
 
-## Project Background
-
-Prenatal diagnostics cannot always rely on a specialist reviewing every monitoring trace, especially in areas with limited clinical resources. The scenario for this project is a company that builds **prenatal and maternal-fetal monitoring solutions** together with clinics and hospitals. It wants to know whether a data-driven tool can help flag the recordings that deserve a closer look.
+The scenario for this project is a company that builds **prenatal and maternal-fetal monitoring solutions** together with clinics and hospitals. It wants to know whether a data-driven tool can help flag the recordings that deserve a closer look.
 
 Each recording is classified as **Normal**, **Suspect** or **Pathological**. Because the three outcomes do not carry the same cost, the analysis was built around three priorities:
 
@@ -49,15 +43,11 @@ Each recording is classified as **Normal**, **Suspect** or **Pathological**. Bec
 
 <img src="images/h_metrics.svg" alt="Key Metrics" width="100%">
 
-## Key Metrics
-
 <img src="images/kpi_cards.svg" alt="Key metrics: macro-F1 0.89, 31 of 35 risky cases found, 5 of 21 measurements suffice, same ranking across 5 seeds" width="100%">
 
 <br>
 
 <img src="images/h_summary.svg" alt="Executive Summary" width="100%">
-
-## Executive Summary
 
 <p align="center">
   <img src="images/results_f1.png" alt="Test-set macro-F1 of the models compared with the baselines" width="80%">
@@ -82,15 +72,10 @@ Each recording is classified as **Normal**, **Suspect** or **Pathological**. Bec
 - **Five measurements are enough.** The gap between 5 and 21 measurements (0.892 vs 0.890) is smaller than the natural variation between data splits, so neither can be called better. A lighter tool looks plausible.
 - **Only 2 of 35 high-risk cases were mistaken for Normal.** The other missed cases were labelled Suspect, which still draws attention.
 - **The weak spot is the Suspect class**, a clinical middle ground that is inherently ambiguous.
-
-> [!NOTE]
-> This is a methodological portfolio project on a public dataset. It is **not** a validated clinical tool.
-
+- 
 <br>
 
 <img src="images/h_insights.svg" alt="Insights Deep-Dive" width="100%">
-
-## Insights Deep-Dive
 
 ### 1. Most recordings are normal, which makes the problem tricky
 
@@ -186,26 +171,10 @@ flowchart LR
 
 <img src="images/h_reco.svg" alt="Recommendations" width="100%">
 
-## Recommendations
-
 1. **Reduce missed risky cases before any real use.** 4 of 35 high-risk recordings were still missed. Adjusting the decision threshold to accept a few more false alarms in exchange for fewer misses is the most clinically relevant improvement.
 2. **Prototype a minimal-measurement tool.** Since 5 measurements match the full set, a screening tool built on them could be cheaper to deploy, provided it is validated on data from other devices and hospitals.
 3. **Try more powerful models.** Gradient boosting methods are the natural next candidates and were not tested here.
 4. **Quantify the uncertainty.** With only 35 high-risk test cases, adding confidence intervals would show how much these percentages could move.
-
-<br>
-
-<img src="images/h_limits.svg" alt="Limitations" width="100%">
-
-## Limitations
-
-- **Small test set.** 423 recordings, only 35 Pathological: one more miss changes their recall by about 3 points.
-- **Feature selection used the whole training set** rather than being repeated inside each cross-validation fold, so cross-validation scores for the 5-measurement setup are slightly optimistic. The test set was never used for selection.
-- **One data source and no external validation.** Real-world performance may be lower.
-- **Limited scope.** Three algorithms, small tuning grids, one way of handling imbalance, and the seed check covers only the default-settings comparison.
-- **Timings are indicative** (single run on a single-core machine).
-
-<br>
 
 <img src="images/h_repo.svg" alt="Repository and How to Run" width="100%">
 
@@ -234,11 +203,10 @@ pip install -r requirements.txt
 jupyter notebook notebooks/Fetal_Health_Classification.ipynb
 ```
 
-The notebook takes roughly 4 minutes on a single core, most of it the Random Forest search.
 
-## About the Author
+## Author
 
-**Alessandro Cucchi**, data analyst. I turn raw data into clear answers and explain them to the people who decide.
+**Alessandro Cucchi**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0f2744?logo=linkedin&logoColor=7fe3d6)](https://www.linkedin.com/in/YOUR-LINKEDIN/)
 [![GitHub](https://img.shields.io/badge/GitHub-0f2744?logo=github&logoColor=7fe3d6)](https://github.com/YOUR-USERNAME)
